@@ -1,9 +1,13 @@
 
+name: Create Release
 on:
   release:
     type: [published]
-name: Create Release
+  workflow_dispatch:
 jobs:
+  build:
+    runs-on: ubuntu-latest
+
   release-new-version:
     exclude:
       labels:
