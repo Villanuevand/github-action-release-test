@@ -1,28 +1,28 @@
-
 name: Create Release
+
 on:
   release:
     type: [published]
   workflow_dispatch:
+
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      release-new-version:
+  release-job:
+    name: New release
+      steps:
         exclude:
           labels:
             - ignore-for-release
           authors:
             - octocat
-        categories:
-          - title: Breaking Changes 🛠
-            labels:
-              - Semver-Major
-              - breaking-change
-          - title: Exciting New Features 🎉
-            labels:
-              - Semver-Minor
-              - enhancement
-          - title: Other Changes
-            labels:
-              - "*"
+          categories:
+            - title: Breaking Changes 🛠
+              labels:
+                - Semver-Major
+                - breaking-change
+            - title: Exciting New Features 🎉
+              labels:
+                - Semver-Minor
+                - enhancement
+            - title: Other Changes
+              labels:
+                - "*"
