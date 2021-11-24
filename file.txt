@@ -12,3 +12,5 @@ New Feature
 Other  new Feature
 -----
 Noew this is Ok
+===bug fixing
+---- bug fixing
